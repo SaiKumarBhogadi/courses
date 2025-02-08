@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+}
+body {
+    overflow-x: hidden;
+}
+.navbar{
+    background-color: #007bff !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+}
+.nav-link{
+    color: white !important;
+}
+footer{
+    background-color: #007bff !important;
+}
+.hero {
+    background: url('./images/3887.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.hero div {
+    position: relative;
+    z-index: 1;
+}
+.hero h1 {
+    font-size: 3rem;
+}
+.course-card {
+    transition: transform 0.3s ease-in-out;
+}
+.course-card:hover {
+    transform: scale(1.05);
+}
+.course-card img {
+    height: 200px;
+    object-fit: cover;
+}
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.why-choose-card {
+    transition: transform 0.3s ease-in-out;
+}
+.why-choose-card:hover {
+    transform: scale(1.05);
+}
+.why-choose-icon {
+    font-size: 2rem;
+    color: #007bff;
+}
+#enroll-form {
+    display: none;
+}
+
+
+
+
+#custom-upload-form{
+    max-width: 600px;
+}
+#custom-contact-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form-card {
+    background: #fff;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-form-card:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-form-label {
+    font-weight: 500;
+    color: #333;
+}
+
+.custom-form-input {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.custom-form-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.custom-form-btn:hover {
+    background: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+.course-sidebar {
+    height: 100vh;
+    background: #f8f9fa;
+    padding: 20px;
+    overflow-y: auto;
+}
+.course-sidebar h5 {
+    margin-bottom: 20px;
+}
+.course-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.course-sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+.course-sidebar ul li:hover {
+    background: #007bff;
+    color: white;
+}
+.video-container {
+    text-align: center;
+}
+.video-container video {
+    width: 100%;
+    max-height: 500px;
+    border-radius: 8px;
+}
+.progress-bar {
+    height: 10px;
+    background: #007bff;
+}
+.btn-complete {
+    margin-top: 10px;
+}
+
+
+
+
+.course-card {
+    transition: transform 0.3s ease-in-out;
+}
+.course-card:hover {
+    transform: scale(1.05);
+}
+.progress {
+    height: 10px;
+}
+@media (max-width: 768px) {
+    .course-card {
+        margin-bottom: 20px; /* Adds spacing below each card */
+    }
+    .row {
+        row-gap: 15px; /* Adds spacing between rows */
+    }
+}
+
+
+
+
+
+#add-course {
+    max-width: 600px;
+    margin-top: 50px;
+}

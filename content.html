@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Content</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container">
+            <a class="navbar-brand" href="#">Course Platform</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./my_course.html">My Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./add_course.html">Add Course</a></li>
+
+                </ul>
+                <img src="./images/3887.jpg" alt="Profile" class="profile-img ms-3">
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" style="margin-top: 70px;">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 course-sidebar">
+                <h5>Course Modules</h5>
+                <ul>
+                    <li onclick="changeVideo('video1.mp4')">Introduction</li>
+                    <li onclick="changeVideo('video2.mp4')">Module 1: Basics</li>
+                    <li onclick="changeVideo('video3.mp4')">Module 2: Advanced Topics</li>
+                    <li onclick="changeVideo('video4.mp4')">Module 3: Project Work</li>
+                </ul>
+            </nav>
+            
+            <!-- Main Content -->
+            <main class="col-md-9 p-4">
+                <h2>Python for Beginners</h2>
+                <p>Learn the fundamentals of Python programming with hands-on examples.</p>
+                
+                <div class="video-container my-3">
+                    <video id="course-video" controls>
+                        <source src="video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <!-- <div class="progress-container">
+                    <p>Course Progress:</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 40%"></div>
+                    </div>
+                </div> -->
+                
+                <button class="btn btn-success btn-complete">Mark as Complete</button>
+            </main>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Online Course Platform. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        function changeVideo(videoSrc) {
+            document.getElementById('course-video').src = videoSrc;
+        }
+    </script>
+</body>
+</html>
