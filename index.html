@@ -13,7 +13,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
         <div class="container">
             <a class="navbar-brand" href="#">Course Platform</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,98 +23,136 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="./my_course.html">My Courses</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="#">About</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="#custom-contact-form">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="./add_course.html">Add Course</a></li>
-
                 </ul>
                 <img src="./images/3887.jpg" alt="Profile" class="profile-img ms-3">
             </div>
         </div>
     </nav>
+    
 
-    <!-- Hero Section -->
-    <section class="hero d-flex align-items-center justify-content-center">
-        <div>
-            <h1>Learn Anytime, Anywhere</h1>
-            <p>Join our platform and access high-quality courses.</p>
-            <a href="#courses" class="btn btn-primary btn-lg">Explore Courses</a>
+<!-- Hero Section with Video Background & Animated Search -->
+<section class="hero">
+    <div class="overlay"></div> <!-- Transparent overlay for better readability -->
+    <div class="hero-content">
+        <h1 class="hero-title">
+            Master <span class="typed-text"></span> 🚀
+        </h1>
+        <p class="hero-subtitle">Learn from the best & boost your career.</p>
+
+        <!-- Interactive Search Bar -->
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search for courses...">
+            <button class="search-btn">🔍</button>
         </div>
-    </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="container my-5 text-center">
-        <h2>Why Choose Us?</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card p-4 why-choose-card">
-                    <i class="fas fa-chalkboard-teacher why-choose-icon"></i>
-                    <h5>Expert Instructors</h5>
-                    <p>Learn from industry professionals with years of experience.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4 why-choose-card">
-                    <i class="fas fa-clock why-choose-icon"></i>
-                    <h5>Flexible Learning</h5>
-                    <p>Access courses anytime, anywhere, and learn at your own pace.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4 why-choose-card">
-                    <i class="fas fa-certificate why-choose-icon"></i>
-                    <h5>Certified Courses</h5>
-                    <p>Receive recognized certifications upon course completion.</p>
-                </div>
-            </div>
+        <!-- Call to Action Buttons -->
+        <div class="hero-buttons">
+            <button class="btn btn-primary explore">Explore Courses</button>
+            <button class="btn btn-danger enroll">Enroll Now</button>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Courses Section -->
-    <section id="courses" class="container my-5">
-        <h2 class="text-center">Featured Courses</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card course-card">
-                    <img src="./images/python.jpg" class="card-img-top" alt="Course">
-                    <div class="card-body">
-                        <h5 class="card-title">Python for Beginners</h5>
-                        <p class="card-text">Learn the basics of Python programming.</p>
-                        <p><strong>Price:</strong> Rs 149.99</p>
-                        <p><strong>Rating:</strong> ⭐⭐⭐⭐☆ (4.5/5)</p>
-                        <button class="btn btn-primary enroll-btn">Enroll Now</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="card course-card">
-                    <img src="./images/web.jpg" class="card-img-top" alt="Course">
-                    <div class="card-body">
-                        <h5 class="card-title">Web Development</h5>
-                        <p class="card-text">Learn the basics of Web Development.</p>
-                        <p><strong>Price:</strong> Rs 249.99</p>
-                        <p><strong>Rating:</strong> ⭐⭐⭐⭐☆ (4.5/5)</p>
-                        <button class="btn btn-primary enroll-btn">Enroll Now</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="card course-card">
-                    <img src="./images/marketing.png" class="card-img-top" alt="Course">
-                    <div class="card-body">
-                        <h5 class="card-title">Marketing</h5>
-                        <p class="card-text">Learn the basics of Digital Marketing.</p>
-                        <p><strong>Price:</strong> Rs 149.99</p>
-                        <p><strong>Rating:</strong> ⭐⭐⭐⭐☆ (4.5/5)</p>
-                        <button class="btn btn-primary enroll-btn">Enroll Now</button>
-                    </div>
+
+<script>
+    const courseTitles = ["Python", "Web Development", "AI & ML", "Marketing", "UI/UX Design"];
+let index = 0;
+const typedText = document.querySelector(".typed-text");
+
+function typeEffect() {
+    typedText.textContent = courseTitles[index];
+    index = (index + 1) % courseTitles.length;
+}
+
+setInterval(typeEffect, 2000);
+
+    
+
+</script>
+
+
+<!-- Featured Courses Carousel -->
+<section id="courses" class="container my-5">
+    <h2 class="text-center fw-bold"><span class="fire-symbol">🔥</span> Popular Courses</h2>
+    <p class="text-center text-muted">Master new skills with top-rated courses</p>
+    <p class="text-center text-muted">
+        📚 Upgrade your skills with our top-rated courses designed by industry experts. 
+        Whether you're a beginner or a pro, we have something for everyone!
+    </p>
+    <div class="row g-4">
+        <!-- Course Card 1 -->
+        <div class="col-md-4" id="card">
+            <div class="card course-card">
+                <div class="tag">Best Seller</div>
+                <img src="./images/python.jpg" class="card-img-top" alt="Python Course">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Python for Beginners</h5>
+                    <p class="course-rating">⭐⭐⭐⭐☆ (4.5/5)</p>
+                    <p class="card-text">Master Python fundamentals.</p>
+                    <p class="price">Rs 149.99</p>
+                    <button class="btn btn-primary enroll-btn">Enroll Now</button>
                 </div>
             </div>
         </div>
-    </section>
+        <!-- Course Card 2 -->
+        <div class="col-md-4" id="card">
+            <div class="card course-card">
+                <div class="tag">Trending</div>
+                <img src="./images/web.jpg" class="card-img-top" alt="Web Development">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Web Development</h5>
+                    <p class="course-rating">⭐⭐⭐⭐☆ (4.5/5)</p>
+                    <p class="card-text">Build responsive websites.</p>
+                    <p class="price">Rs 249.99</p>
+                    <button class="btn btn-primary enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- Course Card 3 -->
+        <div class="col-md-4" id="card">
+            <div class="card course-card">
+                <div class="tag popular">Popular</div>
+                <img src="./images/marketing.png" class="card-img-top" alt="Marketing">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Marketing</h5>
+                    <p class="course-rating">⭐⭐⭐⭐☆ (4.5/5)</p>
+                    <p class="card-text">Learn digital marketing skills.</p>
+                    <p class="price">Rs 149.99</p>
+                    <button class="btn btn-primary enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+        </div>
 
+        
+    </div>
+</section>
+    
+
+
+
+<!-- JavaScript for Filtering -->
+<script>
+function filterCourses() {
+    let searchQuery = document.getElementById('searchInput').value.toLowerCase();
+    let category = document.getElementById('categoryFilter').value;
+
+    document.querySelectorAll('.course-card').forEach(card => {
+        let title = card.querySelector('.card-title').innerText.toLowerCase();
+        let matchesSearch = title.includes(searchQuery);
+        let matchesCategory = category === "" || title.includes(category);
+
+        if (matchesSearch && matchesCategory) {
+            card.parentElement.style.display = "block";
+        } else {
+            card.parentElement.style.display = "none";
+        }
+    });
+}
+</script>
 
      <!-- Enrollment Form -->
      <section id="enroll-form" class="container my-5">
@@ -143,6 +181,174 @@
 
 
 
+
+    <section class="why-choose py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Text Section -->
+                <div class="col-md-6">
+                    <h2 class="fw-bold">🚀 Why Learn With Us?</h2>
+                    <p class="lead">Join thousands of students mastering in-demand skills with our expert-led courses.</p>
+    
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success"></i> 10,000+ students enrolled</li>
+                        <li><i class="fas fa-star text-warning"></i> 95% positive reviews</li>
+                        <li><i class="fas fa-certificate text-primary"></i> Industry-recognized certifications</li>
+                        <li><i class="fas fa-briefcase text-danger"></i> Job-ready practical skills</li>
+                    </ul>
+    
+                    <a href="#courses" class="btn btn-primary mt-3">Start Learning Now</a>
+                </div>
+    
+                <!-- Image Section -->
+                <div class="col-md-6 text-center">
+                    <img src="./images/student-graduation-cap-using-computer-desk.png" class="img-fluid animate-img" alt="Why Choose Us">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    <section id="course-stats" class="container my-5 text-center">
+        <h2 class="fw-bold"><span class="fire-symbol">🔥</span> Course Completion Stats</h2>
+        <p class="text-muted">Trusted by thousands of learners worldwide!</p>
+    
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="stats-box">
+                    <i class="fas fa-user-graduate icon"></i>
+                    <h3>10,000+</h3>
+                    <p>Students Enrolled</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stats-box">
+                    <i class="fas fa-star icon"></i>
+                    <h3>95%</h3>
+                    <p>Positive Reviews</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stats-box">
+                    <i class="fas fa-award icon"></i>
+                    <h3>500+</h3>
+                    <p>Certified Courses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section class="container my-5" style="margin-top: 10px;">
+        <div class="row">
+            <!-- FAQ Section -->
+            <div class="col-md-6">
+                <h2 class="fw-bold"><span class="fire-symbol">❓</span> Frequently Asked Questions</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                📌 How do I enroll in a course?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Click on the "Enroll Now" button, complete the payment, and start learning immediately!
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                💳 What payment methods do you accept?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We accept credit/debit cards, PayPal, UPI, and net banking.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                🎓 Will I get a certificate?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes! Upon course completion, you'll receive a verified certificate.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Added More FAQ Items -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                ⏳ How long do I have access to the course?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Lifetime access! Revisit lessons anytime.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                📚 Do I need prior experience?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                No! Our courses are designed for beginners and experts alike.
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <!-- Limited-Time Offer Section (Properly Centered) -->
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div class="offer-box text-center p-4">
+                    <h2 class="fw-bold"><span class="fire-symbol">🔥</span> Limited-Time Offer!</h2>
+                    <p class="text-muted">Get 50% OFF on all courses. Offer ends in:</p>
+                    <div id="countdown" class="countdown-timer">00:00:00</div>
+                    <!-- <button class="btn btn-primary ">Enroll Now</button> -->
+                    <button class="btn btn-danger enroll-btn btn-lg mt-3">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function startCountdown(duration) {
+            let timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+                hours = Math.floor(timer / 3600);
+                minutes = Math.floor((timer % 3600) / 60);
+                seconds = timer % 60;
+                document.getElementById("countdown").innerHTML =
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                if (--timer < 0) {
+                    document.getElementById("countdown").innerHTML = "Offer Expired!";
+                }
+            }, 1000);
+        }
+        startCountdown(24 * 60 * 60); // Countdown for 24 hours
+    </script>
+    
+    
+    
 
 
     <section id="custom-contact-form" class="container my-5">
