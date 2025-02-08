@@ -127,7 +127,11 @@ footer{
 
 
 
-
+@media (max-width:768px){
+    .course-sidebar {
+        height: auto !important;
+    }
+}
 .course-sidebar {
     height: 100vh;
     background: #f8f9fa;
